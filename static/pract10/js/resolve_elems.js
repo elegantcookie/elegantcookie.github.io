@@ -47,20 +47,16 @@ function get_header() {
             </div>
         `+ (cookies.getCookie('signed_in') ?
             `
-        <nav class="web-nav">
-            <div class="nav-item last">
-                <a id="sign-in-btn-h" href="index.html">
-                    <span>Sign Out</span>
-                </a>
-            </div>
+        <div class="nav-item last">
+            <a id="sign-in-btn-h" href="index.html">
+                <span>Sign Out</span>
+            </a>
         ` :
             `
-        <nav class="web-nav">
-            <div class="nav-item last">
-                <a href="register.html">
-                    <span>Sign In</span>
-                </a>
-            </div>
+        <div class="nav-item last">
+            <a href="register.html">
+                <span>Sign In</span>
+            </a>
         `+
         `
         </nav>
