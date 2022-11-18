@@ -1,0 +1,56 @@
+<!-- Элемент <!DOCTYPE> предназначен для указания типа текущего документа — DTD (document type definition, описание типа документа) -->
+<!DOCTYPE html>
+<!-- Тег <html> является контейнером, который заключает в себе все содержимое веб-страницы -->
+<html>
+<!-- Тег <head> предназначен для хранения служебной информации о странице -->
+<head>
+    <!-- <title>: элемент заголовка документа HTML-элемент заголовка ( <title> ) определяет заголовок документа, который отображается в заголовке окна браузера или на вкладке страницы -->
+    <title>foreign languages website</title>
+    <!-- Указывает, что содержимое страницы должно быть закодировано в формате utf-8 -->
+    <meta charset="UTF-8">
+    <!-- Добавление иконки на сайт -->
+    <link rel="icon" type="image/png" href="../static/pract2/animal-shelter.png">
+
+    <!-- Web page CSS -->
+    <link rel="stylesheet" href="../static/pract8/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--<script type="module" src="../static/pract10/js/resolve_elems.js"></script>-->
+<script type="module" src="../static/pract10/js/main.js" defer></script>
+
+
+<header>
+</header>
+<section class="contact-section">
+    <div class="contact-form">
+        <form>
+            <div class="contact-container">
+                <div class="contact-form-item">
+                    <input type="email" id="contact-email">
+                    <label for="contact-email">Email</label>
+                </div>
+                <div class="contact-form-item">
+                    <input type="text" id="contact-subject">
+                    <label for="contact-subject">Subject</label>
+                </div>
+
+                <div class="contact-form-item text-area">
+                    <textarea placeholder="type something..."  maxlength="400" id="contact-text"></textarea>
+                </div>
+<!--                <div class="contact-form-item"></div>-->
+                <div class="contact-form-item">
+                    <button class="try-button">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>

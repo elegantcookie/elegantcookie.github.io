@@ -1,1 +1,195 @@
-Hello World
+<!-- Элемент <!DOCTYPE> предназначен для указания типа текущего документа — DTD (document type definition, описание типа документа) -->
+<!DOCTYPE html>
+<!-- Тег <html> является контейнером, который заключает в себе все содержимое веб-страницы -->
+<html>
+<!-- Тег <head> предназначен для хранения служебной информации о странице -->
+<head>
+    <link rel="stylesheet" href="../static/pract10/css/style.css" />
+    <!-- <title>: элемент заголовка документа HTML-элемент заголовка ( <title> ) определяет заголовок документа, который отображается в заголовке окна браузера или на вкладке страницы -->
+    <title>foreign languages website</title>
+    <!-- Указывает, что содержимое страницы должно быть закодировано в формате utf-8 -->
+    <meta charset="UTF-8">
+    <!-- Добавление иконки на сайт -->
+    <link rel="icon" type="image/png" href="../static/pract2/animal-shelter.png">
+
+    <!-- Web page CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!-- Элемент <body> предназначен для хранения содержания веб-страницы (контента), отображаемого в окне браузера -->
+<body>
+<script type="module" src="../static/pract10/js/main.js" defer></script>
+
+
+<header>
+</header>
+
+<!-- Элемент <main> предназначен для основного содержимого документа. -->
+<main>
+    <div class="crs-search-bar-container"></div>
+    <div class="crs-search-res">
+        <h1>Online courses</h1>
+        <div class="crs-search-categories">
+            <div class="crs-search-categories-item">
+                <p>New courses</p>
+            </div>
+            <div class="crs-search-categories-item">
+                <p>Popular courses</p>
+            </div>
+            <div class="crs-search-categories-item">
+                <p>
+                    Recommended for you
+                </p>
+            </div>
+            <div class="crs-search-categories-item">
+                <p>Packages</p>
+            </div>
+        </div>
+        <div class="crs-search-res-container">
+
+            <div class="crs-search-res-gallery-container w-2 h-2">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image">
+                        <img src="https://source.unsplash.com/1600x900/?english" alt="english">
+                    </div>
+                    <div class="crs-search-res-stats">
+                        <div class="crs-search-res-stats-item crs-rate">
+                            <span></span>
+                            <p>4.9</p>
+                        </div>
+                        <div class="crs-search-res-stats-item crs-joined">
+                            <span></span>
+                            <p>12К</p>
+                        </div>
+                        <div class="crs-search-res-stats-item crs-time">
+                            <span></span>
+                            <p>60 ч</p>
+                        </div>
+                    </div>
+                    <div class="crs-search-res-body">
+                        60 hours,
+                        <div class="crs-search-res-text-header">English IELTS</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crs-search-res-gallery-container w-2 h-2">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image" id="crs-search-res-id-2">
+                        <img src="https://source.unsplash.com/1600x900/?spanish" alt="spanish">
+                    </div>
+                    <div class="crs-search-res-body">
+                        <div class="crs-search-res-text-header">Spanish DELE</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crs-search-res-gallery-container w-2 h-2">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image" id="crs-search-res-id-3">
+                        <img src="https://source.unsplash.com/1600x900/?chinese" alt="chinese">
+                    </div>
+                    <div class="crs-search-res-body">
+                        <div class="crs-search-res-text-header">Chinese HSK</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crs-search-res-gallery-container w-4 h-2">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image" id="crs-search-res-id-4">
+                        <img src="https://source.unsplash.com/1600x900/?japanese" alt="japanese">
+                    </div>
+                    <div class="crs-search-res-body">
+                        <div class="crs-search-res-text-header">Japanese JLPT</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crs-search-res-gallery-container w-2 h-4">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image" id="crs-search-res-id-5">
+                        <img src="https://source.unsplash.com/1600x900/?german" alt="german">
+                    </div>
+                    <div class="crs-search-res-body">
+                        <div class="crs-search-res-text-header">German Goethe</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crs-search-res-gallery-container w-2 h-2">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image" id="crs-search-res-id-6">
+                        <img src="https://source.unsplash.com/1600x900/?french" alt="french">
+                    </div>
+                    <div class="crs-search-res-body">
+                        <div class="crs-search-res-text-header">French DELF</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crs-search-res-gallery-container w-2 h-2">
+                <div class="crs-search-res-container-item">
+                    <div class="crs-search-res-like">
+                        <div class="crs-search-res-like-img">
+                            <img src="../static/pract8/heart.png">
+                        </div>
+                    </div>
+                    <div class="crs-search-res-image" id="crs-search-res-id-7">
+                        <img src="https://source.unsplash.com/1600x900/?italian" alt="italian">
+                    </div>
+                    <div class="crs-search-res-stats"></div>
+                    <div class="crs-search-res-body">
+                        <div class="crs-search-res-text-header">Italian CELI</div>
+                        <div class="crs-search-res-text-body">The full course (from A1 to C1) is designed for 1000 hours, first one contains 12 blocks of 5 hours each</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+</footer>
+
+
+
+</body>
+</html>
