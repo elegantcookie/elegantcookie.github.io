@@ -29,7 +29,7 @@ body {
 * {
     padding: 0;
     box-sizing: border-box;
-    font-family: Consolas, serif;
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
     text-decoration: none;
     /*transition: var(--transition);*/
 
