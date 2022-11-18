@@ -190,9 +190,3 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
-
-@media screen and (max-width: 512px) {
-   .crs-search-res-gallery-container {
-       grid-column: span 1;
-   }
-}
