@@ -186,7 +186,21 @@
 }
 
 @media screen and (max-width: 768px) {
-    .crs-search-categories {
+    /*.crs-search-categories {*/
+    /*    grid-template-columns: repeat(1, 1fr);*/
+    /*}*/
+}
+
+@media screen and (max-width: 512px) {
+    .crs-search-res-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .abt-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
+        grid-column: span 1;
     }
 }
