@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+
+body {
+    height: 100%;
+    margin: 0 20%;
+    /* Set a specific height */
+
+    background-color: white;
+    background-image: url("../pract2/undraw_learning_re_32qv_full.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background-position: bottom 90% left 90%;*/
+    background-attachment: scroll;
+    /*background-image: url("/static/pract2/bg_for_website_lowq.png");*/
+    /*background-size: cover;*/
+
+    /* Position and center the image to scale nicely on all screens */
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*position: relative;*/
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Disables scrollbar */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Resets */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+    font-family: Consolas, serif;
+    text-decoration: none;
+}
+
+/* CSS Variables */
+:root {
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+    --primary-color: #0652dd;
+    --secondary-color: #ea2027;
+    --line-height: 1.7rem;
+    --transition: 0.4s ease-in;
+}
+
+/* nav start */
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    font-size: 16px;
+    margin: 10px 40px;
+}
+.nav-item > a {
+    color: black;
+}
+
+.nav-item.last {
+    cursor: pointer;
+    padding: 15px;
+    border: solid;
+    border-radius: 20px;
+}
+
+.nav-item.last:hover {
+    background-color: black;
+}
+.nav-item.last:hover a {
+    color: white;
+}
+
+/* nav end */
+
+
+.flex-header {
+    /*background: #fff;*/
+    display: flex;
+    /*padding: 1rem 1.5rem;*/
+    /*box-shadow: 2px 3px 2px #f1f1f1;*/
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.hero-image {
+    /*background-color: #ea2027;*/
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+}
+.hero-section {
+    margin-bottom: 30%;
+    margin-top: 10%;
+}
+
+.hero-text {
+    text-align: left;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    color: black;
+}
+.hero-text > h1 {
+    font-size: 70px;
+    max-width: 5%;
+}
+
+.hero-text > h2 {
+    max-width: 50%;
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+
+/* Button start */
+.hero-text > #try-button {
+    border-radius: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    /*border: solid black;*/
+    background-color: #372E7F;
+    width:200px;
+    height:60px;
+    display: grid;
+}
+
+.hero-text > #try-button:active {
+    background-color: red;
+}
+
+
+#try-button > #try-button-inner {
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+#try-button-inner > a {
+    color: white;
+}
+
+#try-button-inner > a:visited {
+    color: white;
+}
+
+/* Button end */
+
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.benefit-card {
+    margin-bottom: 10%;
+    /*background-color: #5D3FD3;*/
+    width: 350px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.benefit-card-bg {
+    width: 150px;
+    height: 150px;
+    background-color: #F4F5FF;
+    border: solid;
+}
+
+.benefit-card-desc {
+    background-color: #F4F5FF;
+    height: 100%;
+    width: 100%;
+    border: solid;
+}
+
+/* Aside start */
+.ads {
+    position: fixed;
+    border: solid black;
+
+    top: auto;
+    /*top: 0;*/
+    /*right: 0;*/
+    bottom: 10%;
+    left: 50px;
+    width: 250px;
+    height: 700px;
+}
+
+.flex-ads {
+    width:100%;
+    height: 100%;
+    cursor: pointer;
+    /*height: 100%;*/
+    /*width: 100%;*/
+}
+
+.flex-ads ~ div {
+    background-color: #ea2027;
+
+}
+
+.flex-ads_item.img ~ .flex-ads_item.description {
+    color: #ea2027;
+}
+
+.flex-ads_item.img + .flex-ads_item.description {
+    margin: 40% 0;
+    text-align: center;
+}
+/* Aside end */
+
+/* Aside start 2 */
+.ads-left {
+    position: sticky;
+    border: solid black;
+    /*background-color: #ea2027;*/
+    top: auto;
+    /*top: 0;*/
+    /*right: 0;*/
+    bottom: 10%;
+    /*left: 50px;*/
+    margin-left: 1235px;
+    width: 250px;
+    height: 700px
+}
+
+.flex-ads-left {
+    width:100%;
+    height: 100%;
+    cursor: pointer;
+    /*height: 100%;*/
+    /*width: 100%;*/
+}
+
+.flex-ads-left ~ div {
+    background-color: #ea2027;
+
+}
+
+.flex-ads_item.img ~ .flex-ads_item.description {
+    color: #ea2027;
+}
+
+.flex-ads_item.img + .flex-ads_item.description {
+    margin: 40% 0;
+    text-align: center;
+}
+/* Aside end 2 */
+
+/* Section start */
+ul > li {
+    font-family: 'Roboto', sans-serif;
+}
+/* Section end */
+
+/* Cat image start */
+.cat-image {
+    float: right;
+    width: 300px;
+    height: 300px;
+}
+/* Cat image end */
+
+/* Videos start */
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video-item {
+    flex: 1 0 33%;
+}
+
+.video-item > iframe {
+    width: 500px;
+    height: 400px;
+}
+
+.video-item > video {
+    width: 500px;
+    height: 400px;
+}
+/* Videos end */
+
+/* Form start */
+
+form {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-column {
+    width: 50%;
+}
+
+.form-column > div {
+    width: 100%;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: black;
+    color: white;
+}
+
+input::placeholder {
+    color: black;
+}
+
+input::placeholder:focus {
+    color: white;
+}
+
+/*textarea {*/
+/*    min-width: 400px;*/
+/*    min-height: 200px;*/
+/*}*/
+/* Form end */

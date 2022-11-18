@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+
+body {
+    height: 100%;
+    margin: 0 20%;
+    color: white;
+
+    /* Set a specific height */
+    /*background-color: #211D33;*/
+    background-color: var(--background-color);
+    /*background-image: url("../pract2/undraw_learning_re_32qv_full.svg");*/
+    max-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background-position: bottom 90% left 90%;*/
+    background-attachment: scroll;
+    /*background-image: url("/static/pract2/bg_for_website_lowq.png");*/
+    /*background-size: cover;*/
+
+    /* Position and center the image to scale nicely on all screens */
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*position: relative;*/
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Disables scrollbar */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Resets */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, serif;
+    text-decoration: none;
+    /*transition: var(--transition);*/
+
+}
+
+/* CSS Variables */
+:root {
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+    --primary-color: #0652dd;
+    --secondary-color: #ea2027;
+    --line-height: 1.7rem;
+    --transition: 0.3s ease-in;
+
+    --background-color: #121418;
+
+    --article-font-size: calc(6px + 10 * ((100vw - 320px) / 1120));
+
+
+    /* h1 vars */
+    --h1-size: calc(40px + 24 * ((100vw - 320px) / 1120));
+    --h1-letter-spacing: -2px;
+    /* h1 vars */
+
+
+    /* h2 vars */
+    --h2-size: calc(20px + 5 * ((100vw - 320px) / 1120));
+    --h2-letter-spacing: -1px;
+    /* h2 vars */
+
+    /* hero text vars */
+    --hero-text-margin-top: calc(20px + 10 * ((100vw - 320px) / 1120));
+
+    /* hero text vars */
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+h1 {
+    font-size: var(--h1-size);
+    letter-spacing: var(--h1-letter-spacing);
+}
+
+h2 {
+    font-size: var(--h2-size);
+    letter-spacing: var(--h2-letter-spacing);
+}
+
+p {
+    font-size: var(--article-font-size);
+}
+/* nav start */
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.nav-item {
+    font-size: calc(10px + 6 * ((100vw - 320px) / 1120));
+    margin: 10px 40px;
+}
+.nav-item > a {
+    color: white;
+
+}
+
+.nav-item.last {
+    cursor: pointer;
+    padding: 15px;
+    border: solid;
+    border-radius: 20px;
+}
+
+.nav-item.last:hover {
+    background-color: black;
+}
+.nav-item.last:hover a {
+    color: white;
+}
+
+#daxak_toggle, .daxak_btn {
+    display: none;
+}
+
+
+
+@media (max-width: 1250px) {
+    .web-nav {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    
+    #daxak_toggle {
+        visibility: visible;
+    }
+
+    .web-nav {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*height: 600px;*/
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--background-color);
+        /*border: 1px solid black;*/
+    }
+
+    .nav-item {
+        font-size: calc(20px + 6 * ((100vw - 320px) / 1120));
+        margin: 10px 40px;
+    }
+    .nav-item > a {
+        color: white;
+    }
+
+    .nav-item.last {
+        cursor: pointer;
+        padding: 15px;
+        border: solid;
+        border-radius: 20px;
+    }
+
+    .nav-item.last:hover {
+        background-color: white;
+    }
+    .nav-item.last:hover a {
+        color: var(--background-color);
+    }
+
+    .daxak_btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 30px; /*по ширине кнопки расположены три полосы span*/
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .daxak_btn > span, .daxak_btn > span::before, .daxak_btn > span::after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px; /*ширина полос, составляющих кнопку меню мобилок-->*/
+        background-color: white; /*цвет полос, составляющих кнопку меню мобилок-->*/
+    }
+
+    .daxak_btn > span::before { /*верхняя полосочка*/
+        content: '';
+        top: -9px;
+    }
+    .daxak_btn > span::after {/*нижняя полосочка*/
+        content: '';
+        top: 9px;
+    }
+
+    #daxak_toggle:checked ~ .daxak_btn > span { /*разворот полоски после нажатия*/
+        transform: rotate(45deg);
+    }
+    #daxak_toggle:checked ~ .daxak_btn > span::before { /*разворот полоски после нажатия*/
+        top: 0;
+        transform: rotate(0);
+    }
+    #daxak_toggle:checked ~ .daxak_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #daxak_toggle:checked ~ .web-nav { /*кнопка меню становится видимой*/
+        visibility: visible;
+        /*left: 0;*/
+    }
+
+}
+
+
+.flex-header {
+    color: white;
+
+    /*background: #fff;*/
+    flex-wrap: wrap;
+    display: flex;
+    /*box-shadow: 2px 3px 2px #f1f1f1;*/
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    transition: none;
+}
+
+.flex-header > * {
+    transition: none;
+}
+
+.hero-section {
+    margin-bottom: 30vh;
+    margin-top: 10vh;
+}
+
+.hero-text {
+    margin-top: calc(80px + 10 * ((100vw - 320px) / 1120));
+}
+
+.hero-text > h1 {
+    max-width: 5%;
+}
+
+.hero-text > h2 {
+    max-width: 50%;
+    margin-top: var(--hero-text-margin-top);
+}
+
+
+/* Button start */
+.hero-text > #try-button {
+    border-radius: 20px;
+    margin-top: var(--hero-text-margin-top);
+    font-size: 20px;
+    /*border: solid black;*/
+    /*background-color: #3F003D;*/
+    background-color: #005EFF;
+    width:200px;
+    height:60px;
+    display: grid;
+}
+
+
+#try-button > #try-button-inner {
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+#try-button-inner > a {
+    color: white;
+}
+
+#try-button-inner > a:visited {
+    color: white;
+;
+}
+
+/* Button end */
+
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-cards {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+}
+
+.benefit-card {
+    margin-bottom: 10%;
+    /*background-color: #5D3FD3;*/
+    width: 450px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.benefit-card-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #4FA2FF;
+    /*border: solid;*/
+}
+
+.benefit-card-desc {
+    background-color: #4FA2FF;
+    height: 100%;
+    width: 100%;
+    /*border: solid;*/
+}
+
+
+/* Section start */
+ul > li {
+    font-family: 'Roboto', sans-serif;
+}
+/* Section end */
+
+/* Cat image start */
+.cat-image {
+    float: right;
+    width: 300px;
+    height: 300px;
+}
+/* Cat image end */
+
+/* Videos start */
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video-item {
+    flex: 1 0 33%;
+}
+
+.video-item > iframe {
+    width: 500px;
+    height: 400px;
+}
+
+.video-item > video {
+    width: 500px;
+    height: 400px;
+}
+/* Videos end */
