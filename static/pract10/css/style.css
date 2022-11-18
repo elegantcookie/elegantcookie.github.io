@@ -122,7 +122,6 @@ nav {
 }
 
 
-
 @media (max-width: 1250px) {
     .web-nav {
         visibility: hidden;
@@ -135,6 +134,7 @@ nav {
     }
 
     .web-nav {
+        z-index: 3;
         display: flex;
         position: absolute;
         left: 0;
@@ -144,7 +144,6 @@ nav {
         /*height: 600px;*/
         justify-content: center;
         flex-direction: column;
-        z-index: 1;
         background-color: var(--background-color);
         /*border: 1px solid black;*/
     }
@@ -180,7 +179,7 @@ nav {
         width: 30px; /*по ширине кнопки расположены три полосы span*/
         height: 30px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 4;
     }
 
     .daxak_btn > span, .daxak_btn > span::before, .daxak_btn > span::after{
@@ -213,6 +212,7 @@ nav {
     }
     #daxak_toggle:checked ~ .web-nav { /*кнопка меню становится видимой*/
         visibility: visible;
+        z-index: 3;
         /*left: 0;*/
     }
 
