@@ -1,0 +1,29 @@
+
+.ftr-container {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    gap: 30px;
+    /*background-color: #4fc865;*/
+}
+
+.ftr-container-item a {
+    color: white;
+}
+
+.ftr-container-item a:hover {
+    color: #4fc865;
+}
+
+@media screen and (max-width: 1000px) {
+    .ftr-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ftr-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
